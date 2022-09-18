@@ -1,0 +1,133 @@
+System:
+  Kernel: 5.15.65-1-MANJARO arch: x86_64 bits: 64 compiler: gcc v: 12.2.0
+    parameters: BOOT_IMAGE=/boot/vmlinuz-5.15-x86_64
+    root=UUID=b0f649f8-0ff6-4bbf-a385-6632dc8f96ee ro nvidia-drm.modeset=1
+    udev.log_priority=3 nowatchdog
+  Desktop: KDE Plasma v: 5.25.5 tk: Qt v: 5.15.5 wm: kwin_x11 vt: 1 dm: SDDM
+    Distro: Manjaro Linux base: Arch Linux
+Machine:
+  Type: Desktop Mobo: ASUSTeK model: M5A99FX PRO R2.0 v: Rev 1.xx
+    serial: <superuser required> BIOS: American Megatrends v: 2501
+    date: 04/07/2014
+CPU:
+  Info: model: AMD Phenom II X4 970 bits: 64 type: MCP arch: K10 level: v2
+    built: 2009-13 process: AMD 45nm family: 0x10 (16) model-id: 4 stepping: 3
+    microcode: 0x10000C8
+  Topology: cpus: 1x cores: 4 smt: <unsupported> cache: L1: 512 KiB
+    desc: d-4x64 KiB; i-4x64 KiB L2: 2 MiB desc: 4x512 KiB L3: 6 MiB
+    desc: 1x6 MiB
+  Speed (MHz): avg: 1150 high: 2200 min/max: 800/3500 boost: disabled
+    scaling: driver: acpi-cpufreq governor: schedutil cores: 1: 800 2: 800
+    3: 2200 4: 800 bogomips: 28103
+  Flags: ht lm nx pae sse sse2 sse3 sse4a svm
+  Vulnerabilities:
+  Type: itlb_multihit status: Not affected
+  Type: l1tf status: Not affected
+  Type: mds status: Not affected
+  Type: meltdown status: Not affected
+  Type: mmio_stale_data status: Not affected
+  Type: retbleed status: Not affected
+  Type: spec_store_bypass status: Not affected
+  Type: spectre_v1 mitigation: usercopy/swapgs barriers and __user pointer
+    sanitization
+  Type: spectre_v2 mitigation: Retpolines, STIBP: disabled, RSB filling,
+    PBRSB-eIBRS: Not affected
+  Type: srbds status: Not affected
+  Type: tsx_async_abort status: Not affected
+Graphics:
+  Device-1: NVIDIA GM206 [GeForce GTX 960] vendor: Micro-Star MSI
+    driver: nvidia v: 515.65.01 alternate: nouveau,nvidia_drm non-free: 515.xx+
+    status: current (as of 2022-08) arch: Maxwell code: GMxxx
+    process: TSMC 28nm built: 2014-19 pcie: gen: 2 speed: 5 GT/s lanes: 16
+    ports: active: none off: DP-1,DVI-I-1,HDMI-A-1 empty: DP-2,DP-3
+    bus-ID: 01:00.0 chip-ID: 10de:1401 class-ID: 0300
+  Device-2: Logitech HD Pro Webcam C920 type: USB
+    driver: snd-usb-audio,uvcvideo bus-ID: 1-4:3 chip-ID: 046d:082d
+    class-ID: 0102 serial: <filter>
+  Display: x11 server: X.Org v: 21.1.4 with: Xwayland v: 22.1.3
+    compositor: kwin_x11 driver: X: loaded: nvidia gpu: nvidia,nvidia-nvswitch
+    display-ID: :0 screens: 1
+  Screen-1: 0 s-res: 5760x1200 s-dpi: 93 s-size: 1573x331mm (61.93x13.03")
+    s-diag: 1607mm (63.29")
+  Monitor-1: DP-1 note: disabled pos: bottom-l model: AOC 2060W3
+    serial: <filter> built: 2015 res: 1920x1080 hz: 60 dpi: 112 gamma: 1.2
+    size: 435x239mm (17.13x9.41") diag: 496mm (19.5") ratio: 16:9 modes:
+    max: 1920x1080 min: 640x480
+  Monitor-2: DVI-I-1 note: disabled pos: top-right model: HP LP2465
+    serial: <filter> built: 2006 res: 1920x1200 hz: 60 dpi: 94 gamma: 1.2
+    size: 519x324mm (20.43x12.76") diag: 616mm (24.2") ratio: 16:10 modes:
+    max: 1920x1200 min: 640x480
+  Monitor-3: HDMI-A-1 mapped: HDMI-0 note: disabled pos: primary,bottom-c
+    model: ASUS VP249 serial: <filter> built: 2020 res: 1920x1080 hz: 60 dpi: 93
+    gamma: 1.2 size: 527x296mm (20.75x11.65") diag: 604mm (23.8") ratio: 16:9
+    modes: max: 1920x1080 min: 640x480
+  OpenGL: renderer: NVIDIA GeForce GTX 960/PCIe/SSE2 v: 4.6.0 NVIDIA
+    515.65.01 direct render: Yes
+Audio:
+  Device-1: AMD SBx00 Azalia vendor: ASUSTeK driver: snd_hda_intel
+    bus-ID: 1-4:3 v: kernel chip-ID: 046d:082d bus-ID: 00:14.2 class-ID: 0102
+    chip-ID: 1002:4383 serial: <filter> class-ID: 0403
+  Device-2: NVIDIA GM206 High Definition Audio vendor: Micro-Star MSI
+    driver: snd_hda_intel v: kernel pcie: gen: 2 speed: 5 GT/s lanes: 16
+    bus-ID: 01:00.1 chip-ID: 10de:0fba class-ID: 0403
+  Device-3: Logitech HD Pro Webcam C920 type: USB
+    driver: snd-usb-audio,uvcvideo
+  Sound Server-1: ALSA v: k5.15.65-1-MANJARO running: yes
+  Sound Server-2: sndio v: N/A running: no
+  Sound Server-3: PulseAudio v: 16.1 running: no
+  Sound Server-4: PipeWire v: 0.3.57 running: yes
+Network:
+  Device-1: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet
+    vendor: ASUSTeK P8 series driver: r8168 v: 8.050.03-NAPI modules: r8169
+    pcie: gen: 1 speed: 2.5 GT/s lanes: 1 port: c000 bus-ID: 09:00.0
+    chip-ID: 10ec:8168 class-ID: 0200
+  IF: enp9s0 state: down mac: <filter>
+  IF-ID-1: enp7s0u2 state: unknown speed: -1 duplex: half mac: <filter>
+  IF-ID-2: virbr0 state: down mac: <filter>
+Bluetooth:
+  Device-1: Qualcomm QM215-QRD _SN:6E0F6B73 type: USB driver: rndis_host,usbfs
+    bus-ID: 8-2:3 chip-ID: 05c6:9024 class-ID: 0a00 serial: <filter>
+  Report: bt-service: disabled note: tool can't run
+Drives:
+  Local Storage: total: 3.34 TiB used: 326.2 GiB (9.5%)
+  SMART Message: Unable to run smartctl. Root privileges required.
+  ID-1: /dev/sda maj-min: 8:0 vendor: PNY model: CS1311 240GB SSD
+    size: 223.57 GiB block-size: physical: 512 B logical: 512 B speed: 6.0 Gb/s
+    type: SSD serial: <filter> rev: 1122 scheme: MBR
+  ID-2: /dev/sdb maj-min: 8:16 vendor: Samsung model: HD322HJ
+    size: 298.09 GiB block-size: physical: 512 B logical: 512 B speed: 3.0 Gb/s
+    type: N/A serial: <filter> rev: 1118 scheme: MBR
+  ID-3: /dev/sdc maj-min: 8:32 vendor: PNY model: CS1311 960GB SSD
+    size: 894.25 GiB block-size: physical: 512 B logical: 512 B speed: 6.0 Gb/s
+    type: SSD serial: <filter> rev: 1122 scheme: MBR
+  ID-4: /dev/sdd maj-min: 8:48 vendor: Western Digital
+    model: WDS120G2G0A-00JH30 size: 111.8 GiB block-size: physical: 512 B
+    logical: 512 B speed: 6.0 Gb/s type: SSD serial: <filter> rev: 0000
+    scheme: MBR
+  ID-5: /dev/sde maj-min: 8:64 vendor: Western Digital
+    model: WD10EZEX-08WN4A0 size: 931.51 GiB block-size: physical: 4096 B
+    logical: 512 B speed: 6.0 Gb/s type: HDD rpm: 7200 serial: <filter>
+    rev: 1A02 scheme: MBR
+  ID-6: /dev/sdf maj-min: 8:80 vendor: Western Digital
+    model: WD1002FBYS-02A6B0 size: 931.51 GiB block-size: physical: 512 B
+    logical: 512 B speed: 3.0 Gb/s type: HDD rpm: 7200 serial: <filter>
+    rev: 0C06 scheme: MBR
+  ID-7: /dev/sdg maj-min: 8:96 type: USB vendor: A-Data model: USB Flash
+    Drive size: 28.91 GiB block-size: physical: 512 B logical: 512 B type: SSD
+    serial: <filter> rev: 1100 scheme: MBR
+  SMART Message: Unknown USB bridge. Flash drive/Unsupported enclosure?
+Partition:
+  ID-1: / raw-size: 223.57 GiB size: 219 GiB (97.96%) used: 47.94 GiB (21.9%)
+    fs: ext4 dev: /dev/sda1 maj-min: 8:1
+Swap:
+  Kernel: swappiness: 60 (default) cache-pressure: 100 (default)
+  ID-1: swap-1 type: file size: 512 MiB used: 0 KiB (0.0%) priority: -2
+    file: /swapfile
+Sensors:
+  System Temperatures: cpu: 37.9 C mobo: N/A gpu: nvidia temp: 46 C
+  Fan Speeds (RPM): N/A gpu: nvidia fan: 0%
+Info:
+  Processes: 212 Uptime: 5h 41m wakeups: 0 Memory: 31.27 GiB used: 4.22 GiB
+  (13.5%) Init: systemd v: 251 default: graphical tool: systemctl Compilers:
+  gcc: 12.2.0 clang: 14.0.6 Packages: pm: pacman pkgs: 1607 libs: 336
+  tools: pamac Shell: Bash v: 5.1.16 running-in: yakuake inxi: 3.3.21
