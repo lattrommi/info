@@ -1,0 +1,157 @@
+System:
+  Kernel: 6.1.41-1-MANJARO arch: x86_64 bits: 64 compiler: gcc v: 13.1.1
+    parameters: BOOT_IMAGE=/boot/vmlinuz-6.1-x86_64
+    root=UUID=35f92074-9c31-464e-b7d5-e75abd70ee8d rw splash
+    resume=UUID=c0e7051a-efdd-4e71-8f6c-e35b57ff86ac
+  Desktop: KDE Plasma v: 5.27.6 tk: Qt v: 5.15.10 wm: kwin_x11 vt: 2 dm: SDDM
+    Distro: Manjaro Linux base: Arch Linux
+Machine:
+  Type: Desktop Mobo: ASRock model: X670E Taichi serial: <superuser required>
+    UEFI: American Megatrends LLC. v: 1.21 date: 04/26/2023
+CPU:
+  Info: model: AMD Ryzen 9 7950X bits: 64 type: MT MCP arch: Zen 4 gen: 5
+    level: v4 note: check built: 2022+ process: TSMC n5 (5nm) family: 0x19 (25)
+    model-id: 0x61 (97) stepping: 2 microcode: 0xA601203
+  Topology: cpus: 1x cores: 16 tpc: 2 threads: 32 smt: enabled cache:
+    L1: 1024 KiB desc: d-16x32 KiB; i-16x32 KiB L2: 16 MiB desc: 16x1024 KiB
+    L3: 64 MiB desc: 2x32 MiB
+  Speed (MHz): avg: 3506 high: 4500 min/max: 3000/5880 boost: enabled
+    scaling: driver: acpi-cpufreq governor: schedutil cores: 1: 3000 2: 3599
+    3: 3000 4: 4500 5: 3000 6: 3000 7: 3596 8: 3000 9: 3000 10: 3000 11: 4500
+    12: 3000 13: 3000 14: 3000 15: 4500 16: 3000 17: 4500 18: 3000 19: 4500
+    20: 4500 21: 3000 22: 3000 23: 3000 24: 3000 25: 4500 26: 3000 27: 3000
+    28: 4500 29: 3000 30: 4500 31: 3000 32: 4500 bogomips: 288156
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm
+  Vulnerabilities:
+  Type: itlb_multihit status: Not affected
+  Type: l1tf status: Not affected
+  Type: mds status: Not affected
+  Type: meltdown status: Not affected
+  Type: mmio_stale_data status: Not affected
+  Type: retbleed status: Not affected
+  Type: spec_store_bypass mitigation: Speculative Store Bypass disabled via
+    prctl
+  Type: spectre_v1 mitigation: usercopy/swapgs barriers and __user pointer
+    sanitization
+  Type: spectre_v2 mitigation: Retpolines, IBPB: conditional, IBRS_FW,
+    STIBP: always-on, RSB filling, PBRSB-eIBRS: Not affected
+  Type: srbds status: Not affected
+  Type: tsx_async_abort status: Not affected
+Graphics:
+  Device-1: AMD Navi 21 [Radeon RX 6950 XT] vendor: ASRock driver: amdgpu
+    v: kernel arch: RDNA-2 code: Navi-2x process: TSMC n7 (7nm) built: 2020-22
+    pcie: gen: 4 speed: 16 GT/s lanes: 16 ports: active: DP-3,HDMI-A-1
+    empty: DP-1,DP-2 bus-ID: 03:00.0 chip-ID: 1002:73a5 class-ID: 0300
+  Device-2: AMD Raphael driver: amdgpu v: kernel arch: RDNA-2 code: Navi-2x
+    process: TSMC n7 (7nm) built: 2020-22 pcie: gen: 4 speed: 16 GT/s lanes: 16
+    ports: active: HDMI-A-2 empty: DP-4,DP-5,DP-6 bus-ID: 59:00.0
+    chip-ID: 1002:164e class-ID: 0300 temp: 63.0 C
+  Device-3: Logitech HD Pro Webcam C920 driver: snd-usb-audio,uvcvideo
+    type: USB rev: 2.0 speed: 480 Mb/s lanes: 1 mode: 2.0 bus-ID: 3-2:2
+    chip-ID: 046d:082d class-ID: 0102 serial: <filter>
+  Display: x11 server: X.Org v: 21.1.8 compositor: kwin_x11 driver: X:
+    loaded: amdgpu unloaded: modesetting,radeon alternate: fbdev,vesa
+    dri: radeonsi gpu: amdgpu display-ID: :0 screens: 1
+  Screen-1: 0 s-res: 4480x2160 s-dpi: 96 s-size: 1182x570mm (46.54x22.44")
+    s-diag: 1312mm (51.66")
+  Monitor-1: DP-3 mapped: DisplayPort-2 pos: primary,bottom-l
+    model: LG (GoldStar) ULTRAWIDE serial: <filter> built: 2022 res: 2560x1080
+    dpi: 81 gamma: 1.2 size: 800x335mm (31.5x13.19") diag: 867mm (34.1") modes:
+    max: 2560x1080 min: 640x480
+  Monitor-2: HDMI-A-1 mapped: HDMI-A-0 pos: top-center model: Samsung
+    serial: <filter> built: 2008 res: 1920x1080 hz: 60 dpi: 305 gamma: 1.2
+    size: 160x90mm (6.3x3.54") diag: 184mm (7.2") ratio: 16:9 modes:
+    max: 1920x1080 min: 720x400
+  Monitor-3: HDMI-A-2 mapped: HDMI-A-1-1 pos: bottom-r model: AOC 2060W3
+    serial: <filter> built: 2015 res: 1920x1080 hz: 60 dpi: 112 gamma: 1.2
+    size: 435x239mm (17.13x9.41") diag: 496mm (19.5") ratio: 16:9 modes:
+    max: 1920x1080 min: 720x400
+  API: OpenGL v: 4.6 Mesa 23.0.4 renderer: AMD Radeon RX 6950 XT (navi21
+    LLVM 15.0.7 DRM 3.49 6.1.41-1-MANJARO) direct-render: Yes
+Audio:
+  Device-1: AMD Navi 21/23 HDMI/DP Audio driver: snd_hda_intel v: kernel pcie:
+    gen: 4 speed: 16 GT/s lanes: 16 bus-ID: 03:00.1 chip-ID: 1002:ab28
+    class-ID: 0403
+  Device-2: AMD Rembrandt Radeon High Definition Audio driver: snd_hda_intel
+    v: kernel pcie: gen: 4 speed: 16 GT/s lanes: 16 bus-ID: 59:00.1
+    chip-ID: 1002:1640 class-ID: 0403
+  Device-3: AMD Family 17h/19h HD Audio driver: snd_hda_intel v: kernel pcie:
+    gen: 4 speed: 16 GT/s lanes: 16 bus-ID: 59:00.6 chip-ID: 1022:15e3
+    class-ID: 0403
+  Device-4: Logitech HD Pro Webcam C920 driver: snd-usb-audio,uvcvideo
+    type: USB rev: 2.0 speed: 480 Mb/s lanes: 1 mode: 2.0 bus-ID: 3-2:2
+    chip-ID: 046d:082d class-ID: 0102 serial: <filter>
+  Device-5: Generic USB Audio driver: hid-generic,snd-usb-audio,usbhid
+    type: USB rev: 2.0 speed: 480 Mb/s lanes: 1 mode: 2.0 bus-ID: 5-8:3
+    chip-ID: 26ce:0a06 class-ID: 0300
+  API: ALSA v: k6.1.41-1-MANJARO status: kernel-api with: aoss
+    type: oss-emulator tools: alsactl,alsamixer,amixer
+  Server-1: sndiod v: N/A status: off tools: aucat,midicat,sndioctl
+  Server-2: JACK v: 1.9.22 status: off tools: N/A
+  Server-3: PipeWire v: 0.3.75 status: off with: wireplumber status: active
+    tools: pw-cli,wpctl
+  Server-4: PulseAudio v: 16.1 status: active with: pulseaudio-alsa
+    type: plugin tools: pacat,pactl
+Network:
+  Device-1: Intel Wi-Fi 6 AX210/AX211/AX411 160MHz vendor: Rivet Networks
+    driver: iwlwifi v: kernel pcie: gen: 2 speed: 5 GT/s lanes: 1 bus-ID: 49:00.0
+    chip-ID: 8086:2725 class-ID: 0280
+  IF: wlp73s0 state: down mac: <filter>
+  Device-2: Realtek Killer E3000 2.5GbE vendor: ASRock driver: r8169
+    v: kernel pcie: gen: 2 speed: 5 GT/s lanes: 1 port: a000 bus-ID: 4a:00.0
+    chip-ID: 10ec:3000 class-ID: 0200
+  IF: enp74s0 state: up speed: 1000 Mbps duplex: full mac: <filter>
+Bluetooth:
+  Device-1: Intel AX210 Bluetooth driver: btusb v: 0.8 type: USB rev: 2.0
+    speed: 12 Mb/s lanes: 1 mode: 1.1 bus-ID: 5-7:2 chip-ID: 8087:0032
+    class-ID: e001
+  Report: rfkill ID: hci0 rfk-id: 1 state: down bt-service: enabled,running
+    rfk-block: hardware: no software: yes address: see --recommends
+Drives:
+  Local Storage: total: 1.75 TiB used: 345.68 GiB (19.3%)
+  SMART Message: Unable to run smartctl. Root privileges required.
+  ID-1: /dev/sda maj-min: 8:0 vendor: PNY model: CS1311 240GB SSD
+    size: 223.57 GiB block-size: physical: 512 B logical: 512 B speed: 6.0 Gb/s
+    tech: SSD serial: <filter> fw-rev: 1122 scheme: MBR
+  ID-2: /dev/sdb maj-min: 8:16 vendor: Western Digital
+    model: WD5002ABYS-02B1B0 size: 465.76 GiB block-size: physical: 512 B
+    logical: 512 B speed: 3.0 Gb/s tech: HDD rpm: 7200 serial: <filter>
+    fw-rev: 3B03 scheme: GPT
+  ID-3: /dev/sdc maj-min: 8:32 vendor: Western Digital
+    model: WDS120G2G0A-00JH30 size: 111.8 GiB block-size: physical: 512 B
+    logical: 512 B speed: 6.0 Gb/s tech: SSD serial: <filter> fw-rev: 0000
+    scheme: GPT
+  ID-4: /dev/sdd maj-min: 8:48 vendor: Western Digital
+    model: WD1002FBYS-02A6B0 size: 931.51 GiB block-size: physical: 512 B
+    logical: 512 B speed: 3.0 Gb/s tech: HDD rpm: 7200 serial: <filter>
+    fw-rev: 0C06 scheme: MBR
+  ID-5: /dev/sde maj-min: 8:64 vendor: A-Data model: USB Flash Drive
+    size: 28.91 GiB block-size: physical: 512 B logical: 512 B type: USB rev: 3.0
+    spd: 5 Gb/s lanes: 1 mode: 3.2 gen-1x1 tech: SSD serial: <filter>
+    fw-rev: 1100 scheme: MBR
+  SMART Message: Unknown USB bridge. Flash drive/Unsupported enclosure?
+  ID-6: /dev/sdf maj-min: 8:80 vendor: A-Data model: USB Flash Drive
+    size: 28.91 GiB block-size: physical: 512 B logical: 512 B type: USB rev: 3.0
+    spd: 5 Gb/s lanes: 1 mode: 3.2 gen-1x1 tech: SSD serial: <filter>
+    fw-rev: 1100 scheme: MBR
+  SMART Message: Unknown USB bridge. Flash drive/Unsupported enclosure?
+Partition:
+  ID-1: / raw-size: 102.7 GiB size: 100.53 GiB (97.89%) used: 41.64 GiB (41.4%)
+    fs: ext4 dev: /dev/sdc2 maj-min: 8:34
+  ID-2: /boot/efi raw-size: 300 MiB size: 299.4 MiB (99.80%)
+    used: 25.6 MiB (8.6%) fs: vfat dev: /dev/sdc1 maj-min: 8:33
+Swap:
+  Kernel: swappiness: 60 (default) cache-pressure: 100 (default)
+  ID-1: swap-1 type: partition size: 8.8 GiB used: 0 KiB (0.0%) priority: -2
+    dev: /dev/sdc3 maj-min: 8:35
+Sensors:
+  System Temperatures: cpu: 68.5 C mobo: N/A
+  Fan Speeds (RPM): N/A
+  GPU: device: amdgpu temp: 63.0 C device: amdgpu temp: 55.0 C mem: 58.0 C
+    fan: 854 watts: 43.00
+Info:
+  Processes: 538 Uptime: 11h 14m wakeups: 410 Memory: total: 128 GiB
+  available: 124.93 GiB used: 5.28 GiB (4.2%) Init: systemd v: 253
+  default: graphical tool: systemctl Compilers: gcc: 13.1.1 clang: 15.0.7
+  Packages: pm: pacman pkgs: 1376 libs: 377 tools: pamac pm: flatpak pkgs: 0
+  Shell: Bash v: 5.1.16 running-in: yakuake inxi: 3.3.28
