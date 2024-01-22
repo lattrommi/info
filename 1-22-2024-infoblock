@@ -1,0 +1,234 @@
+
+sudo lsblk -io KNAME,MOUNTPOINT | grep "/";                                                                                                                                                                                                                                                                 
+sudo parted -l;
+lsblk -f;
+sudo blkid;
+sudo efibootmgr -v;
+inxi -Fazy;
+echo !!
+
+loop0   /run/miso/sfs/livefs
+loop1   /run/miso/sfs/mhwdfs
+loop2   /run/miso/sfs/desktopfs
+loop3   /run/miso/sfs/rootfs
+sdc2    /run/media/manjaro/35f92074-9c31-464e-b7d5-e75abd70ee8d
+dm-0    /run/miso/bootmnt
+Model: ATA PNY CS1311 240GB (scsi)
+Disk /dev/sda: 240GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End    Size   Type     File system  Flags
+ 1      1049kB  240GB  240GB  primary  ext4         boot
+
+
+Model: ATA WDC WD5002ABYS-0 (scsi)
+Disk /dev/sdb: 500GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End    Size   File system  Name  Flags
+ 1      1049kB  500GB  500GB  ntfs               msftdata
+
+
+Model: ATA WDC WDS120G2G0A- (scsi)
+Disk /dev/sdc: 120GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End    Size    File system     Name  Flags
+ 1      2097kB  317MB  315MB   fat32                 boot, esp
+ 2      317MB   111GB  110GB   ext4            root
+ 3      111GB   120GB  9449MB  linux-swap(v1)        swap
+
+
+Model: ATA WDC WD1002FBYS-0 (scsi)
+Disk /dev/sdd: 1000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1000GB  1000GB  primary  ext4
+
+
+Model: ADATA USB Flash Drive (scsi)
+Disk /dev/sde: 31.0GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  31.0GB  31.0GB  primary               boot
+ 2      31.0GB  31.0GB  33.6MB  primary  fat16        esp
+
+
+Error: /dev/nvme0n1: unrecognised disk label
+Model: PCIe SSD (nvme)                                                    
+Disk /dev/nvme0n1: 2000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: unknown
+Disk Flags: 
+
+NAME       FSTYPE   FSVER            LABEL            UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0      squashfs 4.0                                                                          0   100% /run/miso/sfs/livefs
+loop1      squashfs 4.0                                                                          0   100% /run/miso/sfs/mhwdfs
+loop2      squashfs 4.0                                                                          0   100% /run/miso/sfs/desktopfs
+loop3      squashfs 4.0                                                                          0   100% /run/miso/sfs/rootfs
+sda                                                                                                       
+└─sda1     ext4     1.0              smpny            b0f649f8-0ff6-4bbf-a385-6632dc8f96ee                
+sdb                                                                                                       
+└─sdb1                                                                                                    
+sdc                                                                                                       
+├─sdc1     vfat     FAT32                             3B56-358A                                           
+├─sdc2     ext4     1.0                               35f92074-9c31-464e-b7d5-e75abd70ee8d   47.6G    48% /run/media/manjaro/35f92074-9c31-464e-b7d5-e75abd70ee8d
+└─sdc3     swap     1                swap             c0e7051a-efdd-4e71-8f6c-e35b57ff86ac                
+sdd                                                                                                       
+└─sdd1     ext4     1.0              exttb            0e862dbc-4e77-4fb3-9ee1-b453dc3bbaf4                
+sde                                                                                                       
+├─sde1     exfat    1.0              Ventoy           85AB-593D                                           
+│ └─ventoy iso9660  Joliet Extension MANJARO_KDE_2126 2022-04-16-05-50-10-00                     0   100% /run/miso/bootmnt
+└─sde2     vfat     FAT16            VTOYEFI          75B8-7B4D                                           
+nvme0n1                                                                                                   
+/dev/loop1: TYPE="squashfs"
+/dev/sdd1: LABEL="exttb" UUID="0e862dbc-4e77-4fb3-9ee1-b453dc3bbaf4" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="01679d41-01"
+/dev/sdb1: LABEL="windurrs" BLOCK_SIZE="512" UUID="5C7DDFAF092E1F16" TYPE="ntfs" PARTUUID="aead854a-e1a9-4c4e-a995-9f5ae1302bd2"
+/dev/loop2: TYPE="squashfs"
+/dev/loop0: TYPE="squashfs"
+/dev/mapper/ventoy: BLOCK_SIZE="2048" UUID="2022-04-16-05-50-10-00" LABEL="MANJARO_KDE_2126" TYPE="iso9660" PTTYPE="dos"
+/dev/sde2: SEC_TYPE="msdos" LABEL_FATBOOT="VTOYEFI" LABEL="VTOYEFI" UUID="75B8-7B4D" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="a02a4de1-02"
+/dev/sde1: LABEL="Ventoy" UUID="85AB-593D" BLOCK_SIZE="512" TYPE="exfat" PTTYPE="dos" PARTUUID="a02a4de1-01"
+/dev/sdc2: UUID="35f92074-9c31-464e-b7d5-e75abd70ee8d" BLOCK_SIZE="4096" TYPE="ext4" PARTLABEL="root" PARTUUID="a137f1e1-5f8b-be44-9f31-b49ab3d5ad54"
+/dev/sdc3: LABEL="swap" UUID="c0e7051a-efdd-4e71-8f6c-e35b57ff86ac" TYPE="swap" PARTUUID="468b8553-1a4a-4b4e-af8a-a845d69fe774"
+/dev/sdc1: UUID="3B56-358A" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="8493538c-e979-d444-a769-bd776887320a"
+/dev/sda1: LABEL="smpny" UUID="b0f649f8-0ff6-4bbf-a385-6632dc8f96ee" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="199098ce-01"
+/dev/loop3: TYPE="squashfs"
+BootCurrent: 0001
+Timeout: 1 seconds
+BootOrder: 0000,0001
+Boot0000* Windows Boot Manager  HD(1,GPT,8493538c-e979-d444-a769-bd776887320a,0x1000,0x96000)/File(\EFI\Microsoft\Boot\bootmgfw.efi)WINDOWS.........x...B.C.D.O.B.J.E.C.T.=.{.9.d.e.a.8.6.2.c.-.5.c.d.d.-.4.e.7.0.-.a.c.c.1.-.f.3.2.b.3.4.4.d.4.7.9.5.}...M................
+Boot0001* UEFI: ADATA USB Flash Drive 1100, Partition 2 PciRoot(0x0)/Pci(0x2,0x1)/Pci(0x0,0x0)/Pci(0x8,0x0)/Pci(0x0,0x0)/Pci(0xc,0x0)/Pci(0x0,0x0)/USB(0,0)/HD(2,MBR,0xa02a4de1,0x39c0000,0x10000)..BO
+System:
+  Kernel: 5.15.32-1-MANJARO arch: x86_64 bits: 64 compiler: gcc v: 11.2.0
+    parameters: BOOT_IMAGE=/boot/vmlinuz-x86_64 lang=en_US keytable=us tz=UTC
+    misobasedir=manjaro misolabel=MANJARO_KDE_2126 quiet systemd.show_status=1
+    apparmor=1 security=apparmor driver=free nouveau.modeset=1 i915.modeset=1
+    radeon.modeset=1
+  Desktop: KDE Plasma v: 5.24.4 tk: Qt v: 5.15.3 wm: kwin_x11 vt: 1 dm: SDDM
+    Distro: Manjaro Linux base: Arch Linux
+Machine:
+  Type: Desktop Mobo: ASRock model: X670E Taichi serial: <superuser required>
+    UEFI: American Megatrends LLC. v: 2.02 date: 11/17/2023
+CPU:
+  Info: model: AMD Ryzen 9 7950X bits: 64 type: MT MCP arch: Zen 3
+    family: 0x19 (25) model-id: 0x61 (97) stepping: 2 microcode: 0xA601206
+  Topology: cpus: 1x cores: 16 tpc: 2 threads: 32 smt: enabled cache:
+    L1: 1024 KiB desc: d-16x32 KiB; i-16x32 KiB L2: 16 MiB desc: 16x1024 KiB
+    L3: 64 MiB desc: 2x32 MiB
+  Speed (MHz): avg: 2983 high: 3599 min/max: 3000/5880 boost: enabled
+    scaling: driver: acpi-cpufreq governor: schedutil cores: 1: 3599 2: 2877
+    3: 2880 4: 2879 5: 2880 6: 2878 7: 2876 8: 2880 9: 2998 10: 2999 11: 3000
+    12: 2998 13: 2998 14: 2998 15: 2999 16: 2997 17: 3598 18: 2880 19: 2878
+    20: 2878 21: 2879 22: 2881 23: 2879 24: 2877 25: 2999 26: 2999 27: 2998
+    28: 2995 29: 2999 30: 2998 31: 3000 32: 2997 bogomips: 288102
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm
+  Vulnerabilities:
+  Type: itlb_multihit status: Not affected
+  Type: l1tf status: Not affected
+  Type: mds status: Not affected
+  Type: meltdown status: Not affected
+  Type: spec_store_bypass
+    mitigation: Speculative Store Bypass disabled via prctl and seccomp
+  Type: spectre_v1
+    mitigation: usercopy/swapgs barriers and __user pointer sanitization
+  Type: spectre_v2 mitigation: Retpolines, IBPB: conditional, IBRS_FW,
+    STIBP: always-on, RSB filling
+  Type: srbds status: Not affected
+  Type: tsx_async_abort status: Not affected
+Graphics:
+  Device-1: AMD vendor: ASRock driver: amdgpu v: kernel pcie: gen: 4
+    speed: 16 GT/s lanes: 16 ports: active: DP-3 empty: DP-1,DP-2,HDMI-A-1
+    bus-ID: 03:00.0 chip-ID: 1002:73a5 class-ID: 0300
+  Device-2: AMD driver: N/A pcie: gen: 4 speed: 16 GT/s lanes: 16
+    bus-ID: 59:00.0 chip-ID: 1002:164e class-ID: 0300
+  Display: x11 server: X.Org v: 1.21.1.3 compositor: kwin_x11 driver: X:
+    loaded: amdgpu unloaded: modesetting,radeon alternate: fbdev,vesa
+    gpu: amdgpu display-ID: :0 screens: 1
+  Screen-1: 0 s-res: 2560x1080 s-dpi: 96 s-size: 677x285mm (26.65x11.22")
+    s-diag: 735mm (28.92")
+  Monitor-1: DP-3 mapped: DisplayPort-2 model: LG (GoldStar) ULTRAWIDE
+    serial: <filter> built: 2022 res: 2560x1080 hz: 60 dpi: 81 gamma: 1.2
+    size: 800x335mm (31.5x13.19") diag: 867mm (34.1") modes: max: 2560x1080
+    min: 640x480
+  OpenGL:
+    renderer: AMD SIENNA_CICHLID (DRM 3.42.0 5.15.32-1-MANJARO LLVM 13.0.1)
+    v: 4.6 Mesa 21.3.8 direct render: Yes
+Audio:
+  Device-1: AMD Navi 21 HDMI Audio [Radeon RX 6800/6800 XT / 6900 XT]
+    driver: snd_hda_intel v: kernel pcie: gen: 4 speed: 16 GT/s lanes: 16
+    bus-ID: 03:00.1 chip-ID: 1002:ab28 class-ID: 0403
+  Device-2: AMD driver: snd_hda_intel v: kernel pcie: gen: 4 speed: 16 GT/s
+    lanes: 16 bus-ID: 59:00.1 chip-ID: 1002:1640 class-ID: 0403
+  Device-3: AMD Family 17h/19h HD Audio driver: snd_hda_intel v: kernel
+    pcie: gen: 4 speed: 16 GT/s lanes: 16 bus-ID: 59:00.6 chip-ID: 1022:15e3
+    class-ID: 0403
+  Device-4: Generic USB Audio type: USB
+    driver: hid-generic,snd-usb-audio,usbhid bus-ID: 5-8:4 chip-ID: 26ce:0a06
+    class-ID: 0300
+  Sound Server-1: ALSA v: k5.15.32-1-MANJARO running: yes
+  Sound Server-2: JACK v: 1.9.20 running: no
+  Sound Server-3: PulseAudio v: 15.0 running: yes
+  Sound Server-4: PipeWire v: 0.3.49 running: yes
+Network:
+  Device-1: Intel Wi-Fi 6 AX210/AX211/AX411 160MHz vendor: Rivet Networks
+    driver: iwlwifi v: kernel pcie: gen: 2 speed: 5 GT/s lanes: 1
+    bus-ID: 49:00.0 chip-ID: 8086:2725 class-ID: 0280
+  IF: wlp73s0 state: down mac: <filter>
+  Device-2: Realtek Killer E3000 2.5GbE vendor: ASRock driver: r8169
+    v: kernel pcie: gen: 2 speed: 5 GT/s lanes: 1 port: a000 bus-ID: 4a:00.0
+    chip-ID: 10ec:3000 class-ID: 0200
+  IF: enp74s0 state: up speed: 1000 Mbps duplex: full mac: <filter>
+Bluetooth:
+  Device-1: Intel AX210 Bluetooth type: USB driver: btusb v: 0.8 bus-ID: 5-7:6
+    chip-ID: 8087:0032 class-ID: e001
+  Report: rfkill ID: hci0 rfk-id: 2 state: up address: see --recommends
+Drives:
+  Local Storage: total: 3.54 TiB used: 47.82 GiB (1.3%)
+  SMART Message: Unable to run smartctl. Root privileges required.
+  ID-1: /dev/nvme0n1 maj-min: 259:0 model: PCIe SSD size: 1.82 TiB
+    block-size: physical: 512 B logical: 512 B speed: 126 Gb/s lanes: 4
+    type: SSD serial: <filter> rev: EQFM21T0 temp: 36.9 C
+  ID-2: /dev/sda maj-min: 8:0 vendor: PNY model: CS1311 240GB SSD
+    size: 223.57 GiB block-size: physical: 512 B logical: 512 B speed: 6.0 Gb/s
+    type: SSD serial: <filter> rev: 1122 scheme: MBR
+  ID-3: /dev/sdb maj-min: 8:16 vendor: Western Digital
+    model: WD5002ABYS-02B1B0 size: 465.76 GiB block-size: physical: 512 B
+    logical: 512 B speed: 3.0 Gb/s type: HDD rpm: 7200 serial: <filter>
+    rev: 3B03 scheme: GPT
+  ID-4: /dev/sdc maj-min: 8:32 vendor: Western Digital
+    model: WDS120G2G0A-00JH30 size: 111.8 GiB block-size: physical: 512 B
+    logical: 512 B speed: 6.0 Gb/s type: SSD serial: <filter> rev: 0000
+    scheme: GPT
+  ID-5: /dev/sdd maj-min: 8:48 vendor: Western Digital
+    model: WD1002FBYS-02A6B0 size: 931.51 GiB block-size: physical: 512 B
+    logical: 512 B speed: 3.0 Gb/s type: HDD rpm: 7200 serial: <filter>
+    rev: 0C06 scheme: MBR
+  ID-6: /dev/sde maj-min: 8:64 type: USB vendor: A-Data
+    model: USB Flash Drive size: 28.91 GiB block-size: physical: 512 B
+    logical: 512 B type: SSD serial: <filter> rev: 1100 scheme: MBR
+  SMART Message: Unknown USB bridge. Flash drive/Unsupported enclosure?
+Partition:
+  Message: No partition data found.
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  System Temperatures: cpu: N/A mobo: N/A gpu: amdgpu temp: 36.0 C mem: 36.0 C
+  Fan Speeds (RPM): N/A gpu: amdgpu fan: 0
+Info:
+  Processes: 530 Uptime: 1h 0m wakeups: 0 Memory: 124.99 GiB
+  used: 3.37 GiB (2.7%) Init: systemd v: 250 tool: systemctl Compilers:
+  gcc: 11.2.0 clang: 13.0.1 Packages: pacman: 1230 lib: 334 flatpak: 0
+  Shell: Zsh v: 5.8.1 default: Bash v: 5.1.16 running-in: konsole inxi: 3.3.15
